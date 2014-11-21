@@ -2,7 +2,7 @@
 VERSION="0.98.5"
 CPUS=`cat /proc/cpuinfo | grep processor | awk '{print $3}' | sort -r | head -n1`
 CPUCOUNT="$(($CPUS+1))"
-wget -q http://tech.combell.com/downloads/clamav-$VERSION.tar.gz -O /usr/local/src/clamav-$VERSION.tar.gz
+wget -q http://x.x.x/downloads/clamav-$VERSION.tar.gz -O /usr/local/src/clamav-$VERSION.tar.gz
 cd /usr/local/src && tar -xzvf clamav-$VERSION.tar.gz
 cd /usr/local/src/clamav-$VERSION
 ./configure --prefix=/usr/local/clamav-$VERSION --enable-ltdl-convenience
