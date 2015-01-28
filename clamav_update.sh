@@ -14,4 +14,6 @@ if pgrep freshclam &> /dev/null ; then sudo killall -e freshclam ; fi
 cp /usr/local/clamav/etc/* /usr/local/clamav-$VERSION/etc/
 rm -f /usr/local/clamav
 ln -s /usr/local/clamav-$VERSION /usr/local/clamav
+mkdir /usr/local/clamav/socket
+chown -R clamav:clamav /usr/local/clamav/
 /etc/init.d/clamd start
